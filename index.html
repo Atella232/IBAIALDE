@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBAIALDE Proiektua - Aurkezpena</title>
+    <!-- Hojas de estilo externas -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- MathJax para fórmulas matemáticas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         /* Letra-tipo pertsonalizatuak aplikatzeko klaseak */
         .font-montserrat {
@@ -306,7 +310,7 @@
                             <p class="font-semibold text-green-800 font-open-sans">Uraren abiadura</p>
                         </div>
                         <div class="sheets-tab-item px-4 py-2 bg-blue-100 rounded-lg border-l-4 border-blue-600">
-                            <p class="font-semibold text-blue-800 font-open-sans">Uraren analitika</p>
+                            <p class="font-semibold text-blue-800 font-open-sans">Animaliak</p>
                         </div>
                         <div class="sheets-tab-item px-4 py-2 bg-yellow-100 rounded-lg border-l-4 border-yellow-600">
                             <p class="font-semibold text-yellow-800 font-open-sans">Zuhaitzak</p>
@@ -823,12 +827,18 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-blue-800 text-base md:text-lg font-montserrat">Kalkulatu batezbesteko denbora eta abiadura</h3>
-                                <div class="formula mt-2 bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
-                                    <div class="text-center">
-                                        <span class="text-xl md:text-2xl font-bold text-blue-800 font-mono">v = d / t</span>
-                                        <p class="text-blue-600 mt-1 text-sm md:text-base font-open-sans">non d = distantzia, t = denbora</p>
-                                    </div>
-                                </div>
+                                <div class="math-formula bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg mb-4">
+    <p class="text-blue-800 font-medium mb-2">Abiadura kalkulatzeko formula:</p>
+    <div class="text-2xl text-center my-3">
+        \[ v = \frac{d}{t} \]
+    </div>
+    <div class="text-sm text-blue-700 mt-2 space-y-1">
+        <p>non:</p>
+        <p>\( v \) = Abiadura (m/s)</p>
+        <p>\( d \) = Ibilbideko distantzia (m)</p>
+        <p>\( t \) = Ibilgailuak behar duen denbora (s)</p>
+    </div>
+</div>
                             </div>
                         </div>
                         
@@ -838,7 +848,7 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-blue-800 text-base md:text-lg font-montserrat">Idatzi emaitzak eta ondorioa</h3>
-                                <p class="text-gray-600 text-sm md:text-base font-open-sans">Idatzi hiru denborak eta kalkuluak <span class="font-semibold">Uraren abiadura</span> fitxan</p>
+                                <p class="text-gray-600 text-sm md:text-base font-open-sans">Idatzi distantziak, denborak eta kalkuluak <span class="font-semibold">Uraren abiadura</span> fitxan</p>
                             </div>
                         </div>
                     </div>
@@ -855,7 +865,6 @@
                         <table class="min-w-full text-sm md:text-base">
                             <thead>
                                 <tr class="bg-blue-600 text-white font-open-sans">
-                                    <th class="py-2 px-4 md:py-3 md:px-6 text-left"></th> {/* Celda vacía para la esquina superior izquierda */}
                                     <th class="py-2 px-4 md:py-3 md:px-6 text-left">Saiakera 1</th>
                                     <th class="py-2 px-4 md:py-3 md:px-6 text-left">Saiakera 2</th>
                                     <th class="py-2 px-4 md:py-3 md:px-6 text-left">Saiakera 3</th>
@@ -972,76 +981,23 @@
                             </div>
                             <div class="w-full">
                                 <p class="font-bold text-green-800">Zuhaitz bakoitzaren perimetroa (P) erabiliz, kalkulatu bere diametroa (D):</p>
-                                <p class="text-sm text-green-700 mt-1 mb-2">Formula: $D = P / \pi$ (non $\pi \approx 3.14159$)</p>
+                                <div class="math-formula bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg mb-4">
+    <p class="text-green-800 font-medium mb-2">Diametroa kalkulatzeko formula:</p>
+    <div class="text-2xl text-center my-3">
+        \[ D = \frac{P}{\pi} \]
+    </div>
+    <div class="text-sm text-green-700 mt-2 space-y-1">
+        <p>non:</p>
+        <p>\( D \) = Zuhaitzaren diametroa (m)</p>
+        <p>\( P \) = Zuhaitzaren perimetroa (m)</p>
+        <p>\( \pi \approx 3.14159 \)</p>
+    </div>
+</div>
                                 <p class="font-bold text-green-800 mt-2">Diametroa datuekin (Zutabea D), kalkulatu:</p>
                                 <div class="grid grid-cols-2 gap-3 mt-3">
-                                    <div class="stat-box bg-white p-3 rounded-lg border border-green-200 shadow">
-                                        <div class="flex items-center">
-                                            <div class="rounded-full bg-green-100 p-2 mr-2">
-                                                <i class="fas fa-calculator text-green-600"></i>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-semibold text-green-700">Batezbestekoa</h4>
-                                                <p class="text-xs text-green-600 font-mono">=(SUM(D2:D15)/COUNT(D2:D15))</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-box bg-white p-3 rounded-lg border border-green-200 shadow">
-                                        <div class="flex items-center">
-                                            <div class="rounded-full bg-green-100 p-2 mr-2">
-                                                <i class="fas fa-sort-amount-down-alt text-green-600"></i>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-semibold text-green-700">Mediana</h4>
-                                                <p class="text-xs text-green-600 font-mono">=MEDIAN(D2:D15)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-box bg-white p-3 rounded-lg border border-green-200 shadow">
-                                        <div class="flex items-center">
-                                            <div class="rounded-full bg-green-100 p-2 mr-2">
-                                                <i class="fas fa-poll text-green-600"></i>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-semibold text-green-700">Moda</h4>
-                                                <p class="text-xs text-green-600 font-mono">=MODE(D2:D15)</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="stat-box bg-white p-3 rounded-lg border border-green-200 shadow">
-                                        <div class="flex items-center">
-                                            <div class="rounded-full bg-green-100 p-2 mr-2">
-                                                <i class="fas fa-arrows-alt-h text-green-600"></i>
-                                            </div>
-                                            <div>
-                                                <h4 class="font-semibold text-green-700">Heina</h4>
-                                                <p class="text-xs text-green-600 font-mono">=MAX(D2:D15)-MIN(D2:D15)</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 <p class="text-xs text-gray-500 mt-2">Oharra: Taulan, perimetroa erregistratu eta gero diametroa kalkulatu beste zutabe batean estatistikak egin aurretik.</p>
-                            </div>
-                        </div>
-                         <div class="mt-4 bg-white rounded-xl shadow-lg p-4">
-                            <h3 class="text-lg font-semibold text-green-800 mb-2">Diametroen Estatistiken Adibidea:</h3>
-                            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                <div class="bg-green-50 p-3 rounded-lg text-center">
-                                    <p class="text-sm text-green-700">Batezbestekoa</p>
-                                    <p class="text-2xl font-bold text-green-800">30.5<span class="text-sm align-baseline">cm</span></p>
-                                </div>
-                                <div class="bg-green-50 p-3 rounded-lg text-center">
-                                    <p class="text-sm text-green-700">Mediana</p>
-                                    <p class="text-2xl font-bold text-green-800">30<span class="text-sm align-baseline">cm</span></p>
-                                </div>
-                                <div class="bg-green-50 p-3 rounded-lg text-center">
-                                    <p class="text-sm text-green-700">Moda</p>
-                                    <p class="text-2xl font-bold text-green-800">28<span class="text-sm align-baseline">cm</span></p>
-                                </div>
-                                <div class="bg-green-50 p-3 rounded-lg text-center">
-                                    <p class="text-sm text-green-700">Heina</p>
-                                    <p class="text-2xl font-bold text-green-800">15<span class="text-sm align-baseline">cm</span></p>
-                                </div>
                             </div>
                         </div>
                     </div>
